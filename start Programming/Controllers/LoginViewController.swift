@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import FirebaseAuthUI
+import FirebaseDatabase
 typealias FIRUser = FirebaseAuth.User
 
 class LoginViewController: UIViewController {
@@ -40,6 +41,24 @@ extension LoginViewController: FUIAuthDelegate {
             return
         }
         
-        print("handle user signup / login")
-    }
+        // 1
+        if let user = Auth.auth().currentUser {
+            let rootRef = Database.database().reference()
+            let userRef = rootRef.child("users").child(user.uid)
+            // 1
+            userRef.setValue(["username": "chase"])
+            
+            // 3
+            userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                if let user = User(snapshot: snapshot) {
+                    print("Welcome back, \(user.username).")
+                } else {
+                    print("New user!")
+                }
+            })
+        
+        }
+        // 2
+
+            }
 }
