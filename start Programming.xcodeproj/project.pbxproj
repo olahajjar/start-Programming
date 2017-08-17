@@ -16,6 +16,10 @@
 		269038681F431DC100E10016 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269038671F431DC100E10016 /* Login.storyboard */; };
 		2690386A1F432E6300E10016 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269038691F432E6300E10016 /* LoginViewController.swift */; };
 		26C436861F446CDB008FD340 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C436851F446CDB008FD340 /* User.swift */; };
+		26C4368B1F44812A008FD340 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4368A1F44812A008FD340 /* CreateUsernameViewController.swift */; };
+		26C4368D1F44E01A008FD340 /* UserSevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4368C1F44E01A008FD340 /* UserSevices.swift */; };
+		26C436901F45AF44008FD340 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C4368F1F45AF44008FD340 /* Constans.swift */; };
+		26C436931F45B463008FD340 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C436921F45B463008FD340 /* Storyboard+Utility.swift */; };
 		E85C1DE6939B5AFBDE697BD4 /* Pods_start_Programming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06A2030C44E37B459F703A5 /* Pods_start_Programming.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,10 @@
 		269038671F431DC100E10016 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		269038691F432E6300E10016 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		26C436851F446CDB008FD340 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		26C4368A1F44812A008FD340 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateUsernameViewController.swift; path = Controllers/CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		26C4368C1F44E01A008FD340 /* UserSevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSevices.swift; path = Services/UserSevices.swift; sourceTree = "<group>"; };
+		26C4368F1F45AF44008FD340 /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constans.swift; path = Supporting/Constans.swift; sourceTree = "<group>"; };
+		26C436921F45B463008FD340 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		A56D9241FD60190E87E7A292 /* Pods-start Programming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-start Programming.release.xcconfig"; path = "Pods/Target Support Files/Pods-start Programming/Pods-start Programming.release.xcconfig"; sourceTree = "<group>"; };
 		E06A2030C44E37B459F703A5 /* Pods_start_Programming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_start_Programming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +91,9 @@
 				269038641F43187400E10016 /* View Controller */,
 				2690384D1F43016800E10016 /* Assets.xcassets */,
 				26C436871F446CE1008FD340 /* Models */,
+				26C4368E1F44E032008FD340 /* Services */,
+				26C436911F45AF53008FD340 /* Supporting */,
+				26C436941F45B4C2008FD340 /* Extensions */,
 			);
 			path = "start Programming";
 			sourceTree = "<group>";
@@ -111,6 +122,7 @@
 			children = (
 				269038581F43169900E10016 /* ViewController.swift */,
 				269038691F432E6300E10016 /* LoginViewController.swift */,
+				26C4368A1F44812A008FD340 /* CreateUsernameViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -121,6 +133,30 @@
 				26C436851F446CDB008FD340 /* User.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		26C4368E1F44E032008FD340 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				26C4368C1F44E01A008FD340 /* UserSevices.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		26C436911F45AF53008FD340 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				26C4368F1F45AF44008FD340 /* Constans.swift */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		26C436941F45B4C2008FD340 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				26C436921F45B463008FD340 /* Storyboard+Utility.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		9895904EFD23EEA006BC4CCB /* Pods */ = {
@@ -273,8 +309,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C436861F446CDB008FD340 /* User.swift in Sources */,
+				26C4368D1F44E01A008FD340 /* UserSevices.swift in Sources */,
 				2690386A1F432E6300E10016 /* LoginViewController.swift in Sources */,
+				26C436931F45B463008FD340 /* Storyboard+Utility.swift in Sources */,
 				269038591F43169900E10016 /* ViewController.swift in Sources */,
+				26C4368B1F44812A008FD340 /* CreateUsernameViewController.swift in Sources */,
+				26C436901F45AF44008FD340 /* Constans.swift in Sources */,
 				269038471F43016800E10016 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
