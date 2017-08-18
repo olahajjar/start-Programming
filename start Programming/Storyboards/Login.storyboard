@@ -47,7 +47,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eum-a4-NsC">
-                                <rect key="frame" x="111" y="304" width="152" height="59"/>
+                                <rect key="frame" x="111" y="324" width="152" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.51448567710000004" green="0.025987413189999999" blue="0.87432183159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -66,7 +66,7 @@
                     <navigationItem key="navigationItem" id="5vC-vc-1Et"/>
                     <connections>
                         <outlet property="loginButton" destination="Eum-a4-NsC" id="7C7-En-xDu"/>
-                        <segue destination="blj-NY-FId" kind="show" id="7oJ-Np-h92"/>
+                        <segue destination="blj-NY-FId" kind="show" identifier="toCreateUsername" id="7oJ-Np-h92"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f26-T8-mYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
