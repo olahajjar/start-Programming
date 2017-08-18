@@ -24,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		155C64E2936A911C73238187 /* Pods-start Programming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-start Programming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-start Programming/Pods-start Programming.debug.xcconfig"; sourceTree = "<group>"; };
 		269038431F43016800E10016 /* start Programming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "start Programming.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		269038461F43016800E10016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2690384D1F43016800E10016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +39,8 @@
 		26C4368C1F44E01A008FD340 /* UserSevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSevices.swift; path = Services/UserSevices.swift; sourceTree = "<group>"; };
 		26C4368F1F45AF44008FD340 /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constans.swift; path = Supporting/Constans.swift; sourceTree = "<group>"; };
 		26C436921F45B463008FD340 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
-		A56D9241FD60190E87E7A292 /* Pods-start Programming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-start Programming.release.xcconfig"; path = "Pods/Target Support Files/Pods-start Programming/Pods-start Programming.release.xcconfig"; sourceTree = "<group>"; };
+		A8635CE7B9430A66C6AD2099 /* Pods-start Programming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-start Programming.release.xcconfig"; path = "Pods/Target Support Files/Pods-start Programming/Pods-start Programming.release.xcconfig"; sourceTree = "<group>"; };
+		D99176DD0DB80C1DAEA882AD /* Pods-start Programming.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-start Programming.debug.xcconfig"; path = "Pods/Target Support Files/Pods-start Programming/Pods-start Programming.debug.xcconfig"; sourceTree = "<group>"; };
 		E06A2030C44E37B459F703A5 /* Pods_start_Programming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_start_Programming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,8 +69,8 @@
 			children = (
 				269038451F43016800E10016 /* start Programming */,
 				269038441F43016800E10016 /* Products */,
-				9895904EFD23EEA006BC4CCB /* Pods */,
 				10A99A44DE5EADD2D4CA2CEF /* Frameworks */,
+				59C0FACB52AD56962C42399A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,8 +90,8 @@
 				269038621F43172700E10016 /* Storyboards */,
 				269038641F43187400E10016 /* View Controller */,
 				2690384D1F43016800E10016 /* Assets.xcassets */,
-				26C436871F446CE1008FD340 /* Models */,
 				26C4368E1F44E032008FD340 /* Services */,
+				26C436871F446CE1008FD340 /* Models */,
 				26C436911F45AF53008FD340 /* Supporting */,
 				26C436941F45B4C2008FD340 /* Extensions */,
 			);
@@ -159,11 +159,11 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		9895904EFD23EEA006BC4CCB /* Pods */ = {
+		59C0FACB52AD56962C42399A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				155C64E2936A911C73238187 /* Pods-start Programming.debug.xcconfig */,
-				A56D9241FD60190E87E7A292 /* Pods-start Programming.release.xcconfig */,
+				D99176DD0DB80C1DAEA882AD /* Pods-start Programming.debug.xcconfig */,
+				A8635CE7B9430A66C6AD2099 /* Pods-start Programming.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -417,13 +417,13 @@
 		};
 		269038561F43016800E10016 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 155C64E2936A911C73238187 /* Pods-start Programming.debug.xcconfig */;
+			baseConfigurationReference = D99176DD0DB80C1DAEA882AD /* Pods-start Programming.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/start Programming/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.start-Programming";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.make-school.startProgramming";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -431,13 +431,13 @@
 		};
 		269038571F43016800E10016 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A56D9241FD60190E87E7A292 /* Pods-start Programming.release.xcconfig */;
+			baseConfigurationReference = A8635CE7B9430A66C6AD2099 /* Pods-start Programming.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/start Programming/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.start-Programming";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.make-school.startProgramming";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

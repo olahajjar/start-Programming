@@ -64,6 +64,7 @@ extension LoginViewController: FUIAuthDelegate {
             
         }
         
+        
         // 1
         guard let user = user
             else { return }
@@ -88,4 +89,3 @@ extension LoginViewController: FUIAuthDelegate {
     }
     
 }
-
