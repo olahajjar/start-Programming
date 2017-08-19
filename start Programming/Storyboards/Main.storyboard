@@ -66,21 +66,21 @@
         <!--List Notes Table View Controller-->
         <scene sceneID="okm-BO-gRc">
             <objects>
-                <tableViewController id="IRj-FT-jyr" customClass="ListNotesTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" id="7cD-eX-Ej3">
+                <tableViewController id="IRj-FT-jyr" customClass="ListNotesTableViewController" customModule="start_Programming" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="7cD-eX-Ej3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listNotesTableViewCell" rowHeight="77" id="DpW-3l-GSf" customClass="ListNotesTableViewCell" customModule="start_Programming" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="77"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listNotesTableViewCell" rowHeight="60" id="DpW-3l-GSf" customClass="ListNotesTableViewCell" customModule="start_Programming" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DpW-3l-GSf" id="WkZ-KZ-Sc0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DpW-3l-GSf" id="WkZ-KZ-Sc0" customClass="ListNotesTableViewCell" customModule="start_Programming" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="languge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsr-ZL-QSX">
-                                            <rect key="frame" x="20" y="15" width="337" height="26"/>
+                                            <rect key="frame" x="8" y="8" width="337" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -89,8 +89,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="programmingLanguge" destination="zsr-ZL-QSX" id="zej-R5-jOI"/>
-                                    <segue destination="z0Q-Zj-gWd" kind="show" identifier="displayLanguge" id="V0Q-Ak-KZh"/>
+                                    <outlet property="programmingLanguge" destination="zsr-ZL-QSX" id="F5X-BU-bX1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -104,34 +103,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obt-oe-GVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1581.5" y="-489.5"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="uRN-vt-Qo9">
-            <objects>
-                <tableViewController id="z0Q-Zj-gWd" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mCC-2j-myI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aRZ-i2-fF7">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aRZ-i2-fF7" id="jIX-pf-UWo">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="z0Q-Zj-gWd" id="n0A-rf-7eh"/>
-                            <outlet property="delegate" destination="z0Q-Zj-gWd" id="KnB-pI-XOf"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LMA-bN-SUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2243" y="-486"/>
         </scene>
     </scenes>
     <resources>
