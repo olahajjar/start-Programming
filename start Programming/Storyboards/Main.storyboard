@@ -45,6 +45,52 @@
             </objects>
             <point key="canvasLocation" x="1581.5999999999999" y="279.31034482758622"/>
         </scene>
+        <!--log out-->
+        <scene sceneID="ett-iS-rel">
+            <objects>
+                <viewController id="c5a-0d-V6u" customClass="Logout" customModule="start_Programming" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9yn-Gi-DdN"/>
+                        <viewControllerLayoutGuide type="bottom" id="dsu-ol-Qaf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r5z-5d-aBP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="press the button to log out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFO-HN-tZ9">
+                                <rect key="frame" x="81" y="106" width="212" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR3-KX-Gy0">
+                                <rect key="frame" x="135" y="260" width="88" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.16214472554926151" green="0.56723791355837949" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="log out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="c5a-0d-V6u" eventType="touchUpInside" id="lXk-XH-lPu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="log out" image="ic_email.png" id="U0C-7R-jSn">
+                        <inset key="imageInsets" minX="-4" minY="-4" maxX="4" maxY="4"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="logout" destination="QR3-KX-Gy0" id="kiT-zh-HoH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Smk-cE-xrC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.79999999999995" y="889.20539730134942"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OBh-Yf-XRl">
             <objects>
@@ -57,6 +103,7 @@
                     <connections>
                         <segue destination="tUH-2L-UfP" kind="relationship" relationship="viewControllers" id="mFi-cb-bOA"/>
                         <segue destination="dhK-FJ-5v9" kind="relationship" relationship="viewControllers" id="wsL-0G-6Rj"/>
+                        <segue destination="c5a-0d-V6u" kind="relationship" relationship="viewControllers" id="AFm-dO-fwo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6N-zx-y1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -165,6 +212,16 @@
                     <view key="view" contentMode="scaleToFill" id="DPE-JP-DQs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GUR-u4-fXp">
+                                <rect key="frame" x="67" y="99" width="255" height="428"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="lesson" id="Rfh-1i-thA">
@@ -220,6 +277,7 @@
     </scenes>
     <resources>
         <image name="btn_options_black" width="24" height="24"/>
+        <image name="ic_email.png" width="24" height="24"/>
         <image name="tab_home_black" width="25" height="25"/>
     </resources>
 </document>

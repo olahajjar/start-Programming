@@ -12,7 +12,12 @@ class DisplayNoteViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
    let lessons:[String]=["lesson1","lesson2","lesson3","lesson4","lesson4","lesson5","lesson6","lesson7","lesson8","lessona9"]
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,8 +40,14 @@ class DisplayNoteViewController: UITableViewController {
         if let identifier = segue.identifier {
             if identifier == "cancel" {
                 print("Cancel button tapped")
-            } 
+            }
+        
+            // 2
+            else if identifier == "lessonDisplay" {
+                // 3
+                print("Transitioning to the Display Note View Controller")
+            }
         }
     }
-    
 }
+
