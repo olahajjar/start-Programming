@@ -31,5 +31,12 @@ class DisplayNoteViewController: UITableViewController {
         
         return cell
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "cancel" {
+                print("Cancel button tapped")
+            } 
+        }
+    }
+    
 }

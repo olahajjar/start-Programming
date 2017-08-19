@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XgV-Et-iiY">
-                                <rect key="frame" x="55" y="76" width="263" height="416"/>
+                                <rect key="frame" x="55" y="76" width="263" height="446"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8S-1q-ULG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1582" y="280"/>
+            <point key="canvasLocation" x="1581.5999999999999" y="279.31034482758622"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OBh-Yf-XRl">
@@ -90,7 +90,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="programmingLanguge" destination="zsr-ZL-QSX" id="F5X-BU-bX1"/>
-                                    <segue destination="gTD-k6-KuN" kind="show" identifier="displayNote" id="fPp-CA-jUZ"/>
+                                    <segue destination="gOl-i7-pto" kind="show" identifier="displayNote" id="fPp-CA-jUZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -105,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="2519.1999999999998" y="-489.80509745127438"/>
         </scene>
-        <!--Title-->
+        <!--lessons-->
         <scene sceneID="t8z-4z-sVD">
             <objects>
                 <tableViewController id="gTD-k6-KuN" customClass="DisplayNoteViewController" customModule="start_Programming" customModuleProvider="target" sceneMemberID="viewController">
@@ -132,6 +132,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="lesson" destination="UV7-7k-5cn" id="Z4U-0u-gOD"/>
+                                    <segue destination="SoZ-mH-J1L" kind="show" identifier="lessonDisplay" id="Ur0-4u-YCQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -140,7 +141,7 @@
                             <outlet property="delegate" destination="gTD-k6-KuN" id="qNx-ME-vdK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="uy6-YI-LKP">
+                    <navigationItem key="navigationItem" title="lessons" id="uy6-YI-LKP">
                         <barButtonItem key="leftBarButtonItem" title="cancel" id="9PP-yu-Wyj">
                             <connections>
                                 <segue destination="Z0J-kl-aTq" kind="unwind" unwindAction="unwindToListNotesViewController:" id="GzD-vp-QwZ"/>
@@ -151,7 +152,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDk-Kl-Dk9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Z0J-kl-aTq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3350.5" y="-484.5"/>
+            <point key="canvasLocation" x="4288.8000000000002" y="-485.30734632683664"/>
+        </scene>
+        <!--lesson-->
+        <scene sceneID="cub-lR-wFB">
+            <objects>
+                <viewController id="SoZ-mH-J1L" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lVi-AX-3am"/>
+                        <viewControllerLayoutGuide type="bottom" id="STz-Fa-5qD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DPE-JP-DQs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="lesson" id="Rfh-1i-thA">
+                        <barButtonItem key="leftBarButtonItem" title="cancel" id="ljp-c0-aYP">
+                            <connections>
+                                <segue destination="F9H-Q7-2j8" kind="unwind" unwindAction="unwindToListNotesViewController:" id="jCU-qj-Kqk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQ7-xW-b3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="F9H-Q7-2j8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5063.1999999999998" y="-485.30734632683664"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z1V-44-3ie">
@@ -171,6 +198,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ee9-cW-Vgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1580" y="-489.80509745127438"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qA0-Rh-bjF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gOl-i7-pto" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DRR-wO-V9V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gTD-k6-KuN" kind="relationship" relationship="rootViewController" id="3J1-gw-yut"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEY-aR-nZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3349.5999999999999" y="-485.30734632683664"/>
         </scene>
     </scenes>
     <resources>
