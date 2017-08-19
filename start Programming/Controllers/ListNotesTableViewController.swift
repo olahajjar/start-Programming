@@ -13,7 +13,22 @@ class ListNotesTableViewController: UITableViewController {
     override func viewDidLoad() {
     super.viewDidLoad()
     }
-    
+    @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 1
+        if let identifier = segue.identifier {
+            // 2
+            if identifier == "displayNote" {
+                // 3
+                print("Transitioning to the Display Note View Controller")
+            }
+        }
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count
     }

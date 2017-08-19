@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		260A535B1F4870A600539C58 /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A535A1F4870A600539C58 /* ListNotesTableViewCell.swift */; };
+		260A535D1F4889EF00539C58 /* DisplayNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A535C1F4889EF00539C58 /* DisplayNoteViewController.swift */; };
+		260A535F1F488ADE00539C58 /* lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A535E1F488ADE00539C58 /* lesson.swift */; };
 		263E503C1F476BD700C55101 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E503B1F476BD700C55101 /* HomeViewController.swift */; };
 		263E50441F47735700C55101 /* ListNotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263E50431F47735700C55101 /* ListNotesTableViewController.swift */; };
 		269038471F43016800E10016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269038461F43016800E10016 /* AppDelegate.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		260A535A1F4870A600539C58 /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListNotesTableViewCell.swift; path = Views/ListNotesTableViewCell.swift; sourceTree = "<group>"; };
+		260A535C1F4889EF00539C58 /* DisplayNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayNoteViewController.swift; path = Controllers/DisplayNoteViewController.swift; sourceTree = "<group>"; };
+		260A535E1F488ADE00539C58 /* lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lesson.swift; sourceTree = "<group>"; };
 		263E503B1F476BD700C55101 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		263E50431F47735700C55101 /* ListNotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListNotesTableViewController.swift; path = Controllers/ListNotesTableViewController.swift; sourceTree = "<group>"; };
 		269038431F43016800E10016 /* start Programming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "start Programming.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				260A535A1F4870A600539C58 /* ListNotesTableViewCell.swift */,
+				260A535E1F488ADE00539C58 /* lesson.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				263E503B1F476BD700C55101 /* HomeViewController.swift */,
 				26C4368A1F44812A008FD340 /* CreateUsernameViewController.swift */,
 				263E50431F47735700C55101 /* ListNotesTableViewController.swift */,
+				260A535C1F4889EF00539C58 /* DisplayNoteViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -323,11 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				263E50441F47735700C55101 /* ListNotesTableViewController.swift in Sources */,
+				260A535D1F4889EF00539C58 /* DisplayNoteViewController.swift in Sources */,
 				26C436861F446CDB008FD340 /* User.swift in Sources */,
 				26C4368D1F44E01A008FD340 /* UserSevices.swift in Sources */,
 				2690386A1F432E6300E10016 /* LoginViewController.swift in Sources */,
 				263E503C1F476BD700C55101 /* HomeViewController.swift in Sources */,
 				260A535B1F4870A600539C58 /* ListNotesTableViewCell.swift in Sources */,
+				260A535F1F488ADE00539C58 /* lesson.swift in Sources */,
 				26C436931F45B463008FD340 /* Storyboard+Utility.swift in Sources */,
 				26C4368B1F44812A008FD340 /* CreateUsernameViewController.swift in Sources */,
 				26C436901F45AF44008FD340 /* Constans.swift in Sources */,

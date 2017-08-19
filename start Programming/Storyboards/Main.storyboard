@@ -56,14 +56,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="tUH-2L-UfP" kind="relationship" relationship="viewControllers" id="mFi-cb-bOA"/>
-                        <segue destination="IRj-FT-jyr" kind="relationship" relationship="viewControllers" id="wsL-0G-6Rj"/>
+                        <segue destination="dhK-FJ-5v9" kind="relationship" relationship="viewControllers" id="wsL-0G-6Rj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6N-zx-y1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="603" y="-57"/>
         </scene>
-        <!--List Notes Table View Controller-->
+        <!--programming languge-->
         <scene sceneID="okm-BO-gRc">
             <objects>
                 <tableViewController id="IRj-FT-jyr" customClass="ListNotesTableViewController" customModule="start_Programming" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,6 +90,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="programmingLanguge" destination="zsr-ZL-QSX" id="F5X-BU-bX1"/>
+                                    <segue destination="gTD-k6-KuN" kind="show" identifier="displayNote" id="fPp-CA-jUZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -98,11 +99,78 @@
                             <outlet property="delegate" destination="IRj-FT-jyr" id="Zb4-Oh-1bP"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" tag="1" title="" image="btn_options_black" id="Ye5-Qb-wLQ"/>
+                    <navigationItem key="navigationItem" title="programming languge" id="yws-uK-54t"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obt-oe-GVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581.5" y="-489.5"/>
+            <point key="canvasLocation" x="2519.1999999999998" y="-489.80509745127438"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="t8z-4z-sVD">
+            <objects>
+                <tableViewController id="gTD-k6-KuN" customClass="DisplayNoteViewController" customModule="start_Programming" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tU0-tK-q3a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Lesson" id="DnM-r8-wAC" customClass="Lesson" customModule="start_Programming" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DnM-r8-wAC" id="G0G-QS-F5g">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV7-7k-5cn">
+                                            <rect key="frame" x="18" y="14" width="302" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lesson" destination="UV7-7k-5cn" id="Z4U-0u-gOD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gTD-k6-KuN" id="Clb-Lt-SzI"/>
+                            <outlet property="delegate" destination="gTD-k6-KuN" id="qNx-ME-vdK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="uy6-YI-LKP">
+                        <barButtonItem key="leftBarButtonItem" title="cancel" id="9PP-yu-Wyj">
+                            <connections>
+                                <segue destination="Z0J-kl-aTq" kind="unwind" unwindAction="unwindToListNotesViewController:" id="GzD-vp-QwZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDk-Kl-Dk9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Z0J-kl-aTq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3350.5" y="-484.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z1V-44-3ie">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dhK-FJ-5v9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="btn_options_black" id="Ye5-Qb-wLQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IgP-Yl-11U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IRj-FT-jyr" kind="relationship" relationship="rootViewController" id="CdL-1M-orv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ee9-cW-Vgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="-489.80509745127438"/>
         </scene>
     </scenes>
     <resources>
