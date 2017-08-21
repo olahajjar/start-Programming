@@ -6,19 +6,35 @@
 //  Copyright © 2017 Makeschool. All rights reserved.
 //
 
-
+import FirebaseDatabase
 import UIKit
 class ListNotesTableViewController: UITableViewController {
-    let names:[String]=["java","javaScript","swift","C","C++","Html","Jqury","php","css","angular"]
+    var names:[String] = []
+    
     override func viewDidLoad() {
-    super.viewDidLoad()
+        
+        super.viewDidLoad()
+        let ref = Database.database().reference()
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let snapshotVal = snapshot.value as! [String: [String: Any]]
+            
+            for snap in snapshotVal {
+                if snap.key != "users" {
+                    Constants.progamminLanguge.names.append(snap.value[Constants.Database.languageKey] as! String)
+                }
+            }
+            self.tableView.reloadData()
+        })
+        
     }
+    
     @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
         
         // for now, simply defining the method is sufficient.
         // we'll add code later
         
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // 1
         if let identifier = segue.identifier {
@@ -26,6 +42,7 @@ class ListNotesTableViewController: UITableViewController {
             if identifier == "displayNote" {
                 // 3
                 print("Transitioning to the Display Note View Controller")
+            
             }
         }
     }
@@ -40,7 +57,6 @@ class ListNotesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! ListNotesTableViewCell
         
         // 2c
-        
         cell.programmingLanguge.text = names[indexPath.row]
         
         return cell

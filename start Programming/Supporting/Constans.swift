@@ -18,4 +18,12 @@ struct Constants {
         static let uid = "uid"
         static let username = "username"
     }
+    struct Database {
+        static let languageKey = "langaugeName"
+         static let languagelist = "lessonList"
+    }
+    struct progamminLanguge {
+        static var names: [String] = []
+        static var lessons: [String] = []
+    }
 }

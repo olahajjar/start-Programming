@@ -5,12 +5,24 @@
 //  Created by make on 8/19/17.
 //  Copyright © 2017 Makeschool. All rights reserved.
 //
-
+import FirebaseDatabase
 import Foundation
 import UIKit
 class DisplayNoteViewController: UITableViewController {
+    var lessons:[String]=[]
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ref = Database.database().reference()
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            let snapshotVal = snapshot.value as! [String: [String: Any]]
+            
+            for snap in snapshotVal {
+                if snap.key != "users" {
+                    Constants.progamminLanguge.lessons.append(snap[String:[String:Constants.progamminLanguge.names]])
+                }
+            }
+            self.tableView.reloadData()
+        })
     }
     @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
         
@@ -18,7 +30,7 @@ class DisplayNoteViewController: UITableViewController {
         // we'll add code later
         
     }
-   let lessons:[String]=["lesson1","lesson2","lesson3","lesson4","lesson4","lesson5","lesson6","lesson7","lesson8","lessona9"]
+   
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lessons.count
