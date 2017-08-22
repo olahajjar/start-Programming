@@ -20,7 +20,7 @@ class ListNotesTableViewController: UITableViewController {
             
             for snap in snapshotVal {
                 if snap.key != "users" {
-                    Constants.progamminLanguge.names.append(snap.value[Constants.Database.languageKey] as! String)
+                self.names.append(snap.value[Constants.Database.languageKey] as! String)
                 }
             }
             self.tableView.reloadData()
@@ -40,10 +40,60 @@ class ListNotesTableViewController: UITableViewController {
         if let identifier = segue.identifier {
             // 2
             if identifier == "displayNote" {
+                //let nav = segue.destination as! UINavigationController
+                let dest = segue.destination as! DisplayNoteViewController
                 // 3
                 print("Transitioning to the Display Note View Controller")
-            
+                let selectedIndex = tableView.indexPathForSelectedRow?.row
+                if names[selectedIndex!] == Constants.Database.javaName{
+                    // 4
+                    dest.pathUrl = Constants.Database.javaPath + Constants.Database.lessonList
+                }else if names[selectedIndex!] == Constants.Database.javascriptName{
+                    
+                    
+//                    let dest = segue.destination as! DisplayNoteViewController
+                    // 4
+                    dest.pathUrl = Constants.Database.javascriptPath + Constants.Database.lessonList
+                }
+                else if names[selectedIndex!] == Constants.Database.swiftName{
+                    
+                    
+//                    let dest = segue.destination as! DisplayNoteViewController
+                    // 4
+                    dest.pathUrl = Constants.Database.swiftPath + Constants.Database.lessonList
+                }else if names[selectedIndex!] == Constants.Database.HtmlName{
+                    
+                    
+//                    let dest = segue.destination as! DisplayNoteViewController
+                    // 4
+                    dest.pathUrl = Constants.Database.HtmlPath + Constants.Database.lessonList
+                }else if names[selectedIndex!] == Constants.Database.cssName{
+                    
+                    
+//                    let dest = segue.destination as! DisplayNoteViewController
+                    // 4
+                    dest.pathUrl = Constants.Database.cssPath + Constants.Database.lessonList
+                }else if names[selectedIndex!] == Constants.Database.angularName{
+                    
+                    
+//                    let dest = segue.destination as! DisplayNoteViewController
+                    // 4
+                    dest.pathUrl = Constants.Database.angularPath + Constants.Database.lessonList
+                }else if names[selectedIndex!] == Constants.Database.jaquryName{
+                    
+                    
+//                    let dest = segue.destination as! DisplayNoteViewController
+                    // 4
+                    dest.pathUrl = Constants.Database.jaquryPath + Constants.Database.lessonList
+                }else if names[selectedIndex!] == Constants.Database.phpName{
+                    
+                    
+//                    let dest = segue.destination as! DisplayNoteViewController
+                    // 4
+                    dest.pathUrl = Constants.Database.phpPath + Constants.Database.lessonList
+                }
             }
+            
         }
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

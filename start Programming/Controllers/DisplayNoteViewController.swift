@@ -10,18 +10,20 @@ import Foundation
 import UIKit
 class DisplayNoteViewController: UITableViewController {
     var lessons:[String]=[]
-    override func viewDidLoad() {
+    var content : [String] = []
+    var pathUrl : String?
+        override func viewDidLoad() {
         super.viewDidLoad()
-        let ref = Database.database().reference()
-        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            let snapshotVal = snapshot.value as! [String: [String: Any]]
-            
-            for snap in snapshotVal {
-                if snap.key != "users" {
-                    Constants.progamminLanguge.lessons.append(snap[String:[String:Constants.progamminLanguge.names]])
-                }
+       let ref = Database.database().reference(withPath:pathUrl!)
+       ref.observeSingleEvent(of: .value, with: { (snapshot) in
+          let snapshotVal = snapshot.value as! [[String: Any]]
+    
+        for snap in snapshotVal {
+                self.lessons.append(snap[Constants.Database.lessonName] as! String)
+            self.content.append(snap[Constants.Database.lessonCntant] as! String)
             }
-            self.tableView.reloadData()
+        
+        self.tableView.reloadData()
         })
     }
     @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
@@ -56,6 +58,10 @@ class DisplayNoteViewController: UITableViewController {
         
             // 2
             else if identifier == "lessonDisplay" {
+//                let nav1 = segue.destination as! UINavigationController
+                let dest1 = segue.destination as! lessonContant
+                let selectedIndex = tableView.indexPathForSelectedRow?.row
+                dest1.content = self.content[selectedIndex!]
                 // 3
                 print("Transitioning to the Display Note View Controller")
             }

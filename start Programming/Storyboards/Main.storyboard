@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="APl-yx-1fk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dhK-FJ-5v9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information About programming" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9N-je-B6U">
-                                <rect key="frame" x="29" y="20" width="306" height="48"/>
+                                <rect key="frame" x="34" y="72" width="306" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XgV-Et-iiY">
-                                <rect key="frame" x="55" y="76" width="263" height="446"/>
+                                <rect key="frame" x="73" y="128" width="229" height="357"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -39,7 +39,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_home_black" id="B8p-DR-Pu6"/>
+                    <tabBarItem key="tabBarItem" tag="-1" title="" image="tab_home_black" id="B8p-DR-Pu6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8S-1q-ULG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +80,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="log out" image="ic_email.png" id="U0C-7R-jSn">
+                    <tabBarItem key="tabBarItem" tag="1" title="log out" image="ic_email.png" id="U0C-7R-jSn">
                         <inset key="imageInsets" minX="-4" minY="-4" maxX="4" maxY="4"/>
                     </tabBarItem>
                     <connections>
@@ -95,15 +95,16 @@
         <scene sceneID="OBh-Yf-XRl">
             <objects>
                 <tabBarController id="APl-yx-1fk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DUl-JG-8RR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="mL2-DU-bMY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tUH-2L-UfP" kind="relationship" relationship="viewControllers" id="mFi-cb-bOA"/>
-                        <segue destination="dhK-FJ-5v9" kind="relationship" relationship="viewControllers" id="wsL-0G-6Rj"/>
-                        <segue destination="c5a-0d-V6u" kind="relationship" relationship="viewControllers" id="AFm-dO-fwo"/>
+                        <segue destination="tUH-2L-UfP" kind="relationship" relationship="viewControllers" id="7TS-OW-M2m"/>
+                        <segue destination="IRj-FT-jyr" kind="relationship" relationship="viewControllers" id="YaU-gl-yyB"/>
+                        <segue destination="c5a-0d-V6u" kind="relationship" relationship="viewControllers" id="aE6-Xw-8QJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6N-zx-y1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,7 +138,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="programmingLanguge" destination="zsr-ZL-QSX" id="F5X-BU-bX1"/>
-                                    <segue destination="gOl-i7-pto" kind="show" identifier="displayNote" id="fPp-CA-jUZ"/>
+                                    <segue destination="gTD-k6-KuN" kind="show" identifier="displayNote" id="gei-eQ-yd1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -146,6 +147,9 @@
                             <outlet property="delegate" destination="IRj-FT-jyr" id="Zb4-Oh-1bP"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="language page" image="btn_heart_black_outline" id="4KS-Qd-666">
+                        <inset key="imageInsets" minX="0.0" minY="-10" maxX="0.0" maxY="10"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="programming languge" id="yws-uK-54t"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obt-oe-GVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,12 +203,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDk-Kl-Dk9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Z0J-kl-aTq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4288.8000000000002" y="-485.30734632683664"/>
+            <point key="canvasLocation" x="3410" y="-490"/>
         </scene>
         <!--lesson-->
         <scene sceneID="cub-lR-wFB">
             <objects>
-                <viewController id="SoZ-mH-J1L" sceneMemberID="viewController">
+                <viewController id="SoZ-mH-J1L" customClass="lessonContant" customModule="start_Programming" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lVi-AX-3am"/>
                         <viewControllerLayoutGuide type="bottom" id="STz-Fa-5qD"/>
@@ -213,13 +217,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GUR-u4-fXp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="." translatesAutoresizingMaskIntoConstraints="NO" id="GUR-u4-fXp">
                                 <rect key="frame" x="67" y="99" width="255" height="428"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -231,15 +234,19 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lessonControl" destination="GUR-u4-fXp" id="xGb-JN-9t7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQ7-xW-b3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="F9H-Q7-2j8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5063.1999999999998" y="-485.30734632683664"/>
+            <point key="canvasLocation" x="4353" y="-491"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z1V-44-3ie">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ee9-cW-Vgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dhK-FJ-5v9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="" image="btn_options_black" id="Ye5-Qb-wLQ"/>
                     <toolbarItems/>
@@ -249,33 +256,15 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="IRj-FT-jyr" kind="relationship" relationship="rootViewController" id="CdL-1M-orv"/>
+                        <segue destination="APl-yx-1fk" kind="relationship" relationship="rootViewController" id="MeF-Pk-ufk"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ee9-cW-Vgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="-489.80509745127438"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qA0-Rh-bjF">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gOl-i7-pto" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DRR-wO-V9V">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="gTD-k6-KuN" kind="relationship" relationship="rootViewController" id="3J1-gw-yut"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bEY-aR-nZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3349.5999999999999" y="-485.30734632683664"/>
+            <point key="canvasLocation" x="-182" y="-57"/>
         </scene>
     </scenes>
     <resources>
+        <image name="btn_heart_black_outline" width="24" height="24"/>
         <image name="btn_options_black" width="24" height="24"/>
         <image name="ic_email.png" width="24" height="24"/>
         <image name="tab_home_black" width="25" height="25"/>
